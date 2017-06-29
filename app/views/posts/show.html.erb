@@ -1,0 +1,24 @@
+  <div class="row">
+     <div class="col-md-12">
+    
+       <div class="column">
+         <div class="col-sm-6 col-md-4">
+           <div class="thumbnail">
+            <% if @post.photo? %>
+            <img><%= image_tag @post.photo.medium, class:"img-response" %></img>
+            <% else %> 
+              <img src="..." alt="...">
+            <%end%>
+             <div class="caption">
+             <p><%= @post.tags.first.month_name %></p>
+             <p><%= time_ago_in_words(@post.time_ago) unless @post.time_ago.blank?%> ago<p><br>
+               <h4><%= @post.title %></h4>
+               <p><span class=""><%= @post.description %></span></p>   
+             </div>
+           </div>
+         </div>
+       </div>
+  
+     </div>
+  </div>
+</div>

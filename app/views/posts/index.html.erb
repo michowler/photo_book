@@ -13,7 +13,7 @@
              <div class="caption">
              <p><%= p.tags.first.month_name %></p>
              <p><%= time_ago_in_words(p.time_ago) unless p.time_ago.blank?%> ago<p><br>
-               <h4><%= link_to p.title, root_path %></h4>
+               <h4><%= link_to p.title, post_path(p.id) %></h4>
                <p><span class=""><%= p.description %></span></p>   
              </div>
            </div>
